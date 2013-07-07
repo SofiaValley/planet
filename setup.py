@@ -1,10 +1,10 @@
 from setuptools import setup
 
-setup(name='YourAppName',
+setup(name='SofiaValleyPlanet',
       version='1.0',
-      description='OpenShift App',
-      author='Your Name',
-      author_email='example@example.com',
-      url='http://www.python.org/sigs/distutils-sig/',
+      description='Planet RSS feed for SofiaValley.com',
+      author='Alexander Todorov',
+      author_email='atodorov@otb.bg',
+      url='http://planet.sofiavalley.com',
 #      install_requires=['Django>=1.3'],
      )
