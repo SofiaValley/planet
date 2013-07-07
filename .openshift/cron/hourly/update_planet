@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ -n "$OPENSHIFT_HOMEDIR" ]; then
+    source $OPENSHIFT_HOMEDIR/python-2.6/virtenv/bin/activate
+    export PYTHON_EGG_CACHE=$OPENSHIFT_DATA_DIR/.python-eggs
+
+    EN_CONF=$OPENSHIFT_REPO_DIR/data/planet.english.ini
+    BG_CONF=$OPENSHIFT_REPO_DIR/data/planet.bulgarian.ini
+
+    $OPENSHIFT_REPO_DIR/libs/venus/planet.py $EN_CONF
+
+
+#    $OPENSHIFT_REPO_DIR/libs/venus/planet.py $BG_CONF
+fi
