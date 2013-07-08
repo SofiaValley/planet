@@ -6,5 +6,4 @@ setup(name='SofiaValleyPlanet',
       author='Alexander Todorov',
       author_email='atodorov@otb.bg',
       url='http://planet.sofiavalley.com',
-#      install_requires=['Django>=1.3'],
      )
