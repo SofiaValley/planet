@@ -1,110 +1,296 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-
-### Fancy Planet HTML template.
-### 
-### When combined with the stylesheet and images in the output/ directory
-### of the Planet source, this gives you a much prettier result than the
-### default examples template and demonstrates how to use the config file
-### to support things like faces
-### 
-### For documentation on the more boring template elements, see
-### examples/config.ini and examples/index.html.tmpl in the Planet source.
-
+<!DOCTYPE html>
+<html lang="bg-BG" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" >
 <head>
-<title><TMPL_VAR name></title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="generator" content="<TMPL_VAR generator ESCAPE="HTML">">
-<link rel="stylesheet" href="planet.css" type="text/css">
-<TMPL_IF feedtype>
-<link rel="alternate" href="http://feeds.feedburner.com/PlanetSofiaValley" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">" type="application/<TMPL_VAR feedtype>+xml">
-</TMPL_IF>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Mobile Specific ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
+
+    <!-- Title Tag ======================================================== -->
+    
+
+    <!-- Browser Specical Files =========================================== -->
+    <!--[if lt IE 9]><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->  
+    <!--[if lt IE 9]> <link rel='stylesheet' id=''  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/ie8.css' type='text/css' media='all' /><![endif]--> 
+
+    <!-- Site Favicon ===================================================== -->
+        
+    <!-- WP HEAD ========================================================== -->
+    
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.13 - http://yoast.com/wordpress/seo/ -->
+<title>За Долината - Sofia Valley</title>
+<link rel="canonical" href="http://sofiavalley.com/about/" />
+<link rel="author" href="https://plus.google.com/111383297933302196021/"/>
+<meta property='og:locale' content='bg_BG'/>
+<meta property='og:type' content='article'/>
+<meta property='og:title' content='За Долината - Sofia Valley'/>
+<meta property='og:description' content='&#8220;Sofia Valley&#8221; е &#8220;Блог за ИТ живота в Софийската долина&#8220;. Идеята е много проста &#8211; да споделяме...'/>
+<meta property='og:url' content='http://sofiavalley.com/about/'/>
+<meta property='og:site_name' content='Sofia Valley'/>
+<meta property='article:author' content='http://www.facebook.com/mmiroslavov'/>
+<meta property='fb:admins' content='692551531'/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@sofiavalley"/>
+<meta name="twitter:domain" content="Sofia Valley"/>
+<meta name="twitter:creator" content="@https://twitter.com/mmiroslavov"/>
+<meta name="twitter:image:src" content=""/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Sofia Valley &raquo; Feed" href="http://feeds.feedburner.com/SofiaValley" />
+<link rel="alternate" type="application/rss+xml" title="Sofia Valley &raquo; Comments Feed" href="http://sofiavalley.com/comments/feed/" />
+
+<link rel='stylesheet' id='st_style-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/style.css?ver=2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/assets/css/font-awesome.min.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/assets/css/responsive.css?ver=3.5.2' type='text/css' media='all' />
+
+<link rel='shortlink' href='http://wp.me/P2NgGt-k' />
+<link href="https://plus.google.com/103080185376468291231/" rel="publisher" /><!-- All in one Favicon 4.3 -->
+<link rel="shortcut icon" href="http://sofiavalley.com/wp-content/uploads/2012/10/SV-16.ico" />
+<link rel="icon" href="http://sofiavalley.com/wp-content/uploads/2012/10/SV-16.png" type="image/png"/>
+
+<style type="text/css">
+.avatar {vertical-align:middle}
+.credit {font-size: 50%;}
+</style>
+		
+<style type="text/css">
+
+body{ 
+    font-family: 'Arial'; 
+                    font-size: 15px;
+            line-height: 22px;
+            
+}
+</style>
+
+<style type="text/css">
+
+.post-title,.widget-post-title{ 
+    font-family: 'Arial'; 
+        font-style: normal;
+            font-style: normal;
+            font-weight: normal;
+                    
+}
+</style>
+
+<style type="text/css">
+
+.st-category-heading,.category .page-title,.search .page-title,.archive .page-title{ 
+    font-family: 'Arial'; 
+        font-style: normal;
+            font-style: normal;
+            font-weight: normal;
+                    
+}
+</style>
+    
+    <style type="text/css">
+      /************** Predefined Colors ********************/
+        .primary-nav ul li a:hover,.primary-nav ul li.current-menu-item > a,.primary-nav ul li a:hover,.primary-nav ul li.current-menu-item > a,.carousel-post-meta,.read-more-button,.list-tabbed li.list-tabbed-active a,table#wp-calendar thead > tr > th,table#wp-calendar td#today,.carousel-wrapper .flex-direction-nav .flex-prev:hover,.carousel-wrapper .flex-direction-nav .flex-next:hover,.subs_submit:hover,.tagcloud a:hover,.author-text b,#submit,.page-tags a:hover,.categories a,.thumb-slider-wrapper .flex-direction-nav .flex-next:hover,.thumb-slider-wrapper .flex-direction-nav .flex-prev:hover,.review-score-over, .review-total-score-wrapper .right,.inside-post-slider .flex-direction-nav .flex-next:hover,.inside-post-slider .flex-direction-nav .flex-prev:hover,.inside-post-slider .flex-control-nav li a.flex-active,.inside-post-slider .flex-control-nav li a:hover,.btn.color,.btn:hover,.tab-title li.current,.acc-title-active,.acc-title:hover,.toggle-title:hover,.toggle_current,.st-pagination .page-current,.st-pagination li a:hover,.carousel-next:hover,.carousel-prev:hover,.content input[type=submit], .bg_color:hover{background-color: #0072C6;-webkit-transition: all .2s linear;-moz-transition: all .2s linear;-o-transition: all .2s linear;transition: all .2s linear;}.footer-wrapper li.widget-post-wrapper:hover .widget-post-thumb img,.flickr_badge_image a img:hover{border: 1px solid #0072C6;-webkit-transition: all .2s linear;-moz-transition: all .2s linear;-o-transition: all .2s linear;transition: all .2s linear;
+    }
+    </style>
+    <style type="text/css">body {background:  #f3f3f3; }</style>
+<!--  ST CSS EDITOR -->
+ <style type="text/css">
+.carousel-slide  .carousel-thumb img{ min-height: 160px ;}
+body {
+	font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", sans-serif !important;	
+}
+.subtitle{
+	padding:0px 0px 5px 10px;
+	color:#333;
+	font-style: italic;
+}
+
+.share_entry {
+  	overflow: inherit;
+}
+
+td img {
+  margin: 0px !important;
+}
+
+.wp-caption-text {
+  font-size: 11px !important;
+}
+
+.b30 {
+	margin-bottom: 15px !important;
+}
+
+.share_entry_update li {
+	display: inline;
+}
+
+.st-category-wrapper .post-title {
+	font-size: 20px;
+}
+
+.post-excerpt p {
+	display: inline;
+}
+
+.page-meta-wrapper {
+	font-size: 11px;
+}
+
+
+.categories a {
+	padding: 4px;
+}
+
+h1, h2 {
+	color: #000 !important;
+	font-weight: bold !important;
+}
+
+.content h3 {
+	font-weight: 600;
+}
+
+.content ul li {
+	margin-bottom: 1px !important;
+}
+
+.content ol li {
+	margin-bottom: 1px !important;
+}
+
+.main-outer-wrapper {
+ 	color: #000 !important;
+}
+
+.subs_input {
+  min-width: 180px;
+}
+
+.logo-outer-wrapper {
+	padding: 0px 0px 0px 0px;
+}
+
+.twelve.columns {
+	margin-bottom: 0px !important;
+}
+
+.page-content a, .page-single-element a, .post-entry a{
+	color: #0072c6 !important;
+}
+
+.read-more-button {
+	color: #0072c6 !important;
+	background-color: white !important;
+	padding: 0px;
+}
+
+.read-more-button:hover {
+	text-decoration: underline !important;
+}
+
+.page-content a:hover, .page-single-element a:hover, .post-entry a:hover {
+	text-decoration: underline !important;
+}
+
+.share_entry ul li {
+	margin-right: 0px;
+}
+
+img.alignnone {
+	margin: 5px 5px 5px 0px;
+}
+</style>
 </head>
+<body class="page page-id-20 page-template page-template-sidebar-page-php">
+    <div class="body-outer-wrapper">
+        <div class="body-wrapper full-width-mode">
+            <div class="header-outer-wrapper b30">
+                <div class="top-nav-outer-wrapper">
+                    <div class="top-nav-wrapper container">
+                        <div class="row">
+                            <div class="top-nav-right text-right right">
+                                 <div class="social-block right">
+                                    <ul>
+                                        <li><a class="icon-facebook"  target="_blank"  href="http://www.facebook.com/SofiaValleyBlog" title="Facebook"></a></li>
+                                        <li><a class="icon-google-plus"  target="_blank"  href="https://plus.google.com/103080185376468291231/" title="Google Plus"></a></li>
+                                        <li><a class="icon-twitter"  target="_blank"  href="https://twitter.com/SofiaValley" title="Twitter"></a></li>
+                                        <li><a class="icon-linkedin"  target="_blank"  href="http://www.linkedin.com/company/sofiavalley" title="Linkedin"></a></li>
+                                        <li><a class="icon-pinterest"  target="_blank"  href="http://www.facebook.com/SofiaValleyBlog" title="Pinterest"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- END .top-nav-outer-wrapper -->
+                <div class="logo-outer-wrapper">
+                    <div class="logo-wrapper container">
+                        <div class="row">
+                            <div class="twelve columns">
+                                <div class="logo-left" style="padding:0px 0px 0px 0px;height:150px;">
+                                    <img src="header.png" alt="Header">
+                                    <img src="logo.png" alt="Logo" style="border: 5px solid #fff;position:relative;top:-130px;left:30px;width:100px;height:100px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div> <!-- END .logo-outer-wrapper -->
+            </div> <!-- END .header-outer-wrapper-->
 
-<body>
-<h1><TMPL_VAR name></h1>
-<TMPL_VAR admin>
+<div class="main-outer-wrapper mt30">
+    <div class="main-wrapper container">
+        <div class="row row-wrapper">
+            <div class="page-wrapper twelve columns b0">
+                <div class="row">
+                    <div class="page-wrapper twelve columns right-sidebar b0">
+                        <div class="row">
+                            <div class="content-wrapper eight columns b0">
+                                <h1 class="page-title">За Долината</h1>
+                                <div class="post-20 page type-page status-publish hentry content clearfix">
+                                    <div class="post-entry">
 
-<TMPL_LOOP Items>
-<TMPL_IF new_date>
-<TMPL_UNLESS __FIRST__>
-### End <div class="channelgroup">
-</div>
-### End <div class="daygroup">
-</div>
-</TMPL_UNLESS>
-<div class="daygroup">
-<h2><TMPL_VAR new_date></h2>
-</TMPL_IF>
+                                    </div>
+                                </div>
+                            </div>
 
-<TMPL_IF new_channel>
-<TMPL_UNLESS new_date>
-### End <div class="channelgroup">
-</div>
-</TMPL_UNLESS>
-<div class="channelgroup">
+                            <div class="right-sidebar-wrapper four columns b0">
+                                <div class="right-sidebar sidebar">
+                                    <div class="widget-container widget_tag_cloud">
+                                        <h3 class="widgettitle">Subscriptions</h3>
+                                        <div class="tagcloud">
+                                            <TMPL_LOOP Channels>
+                                                <a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message tag-link-42" style='font-size: 15.5490196078pt;' title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a>
+                                            </TMPL_LOOP>
+                                        </div>
+                                    </div>
 
-### Planet provides template variables for *all* configuration options for
-### the channel (and defaults), even if it doesn't know about them.  We
-### exploit this here to add hackergotchi faces to our channels.  Planet
-### doesn't know about the "face", "facewidth" and "faceheight" configuration
-### variables, but makes them available to us anyway.
+                                    <div class="widget-container widget_tag_cloud">
+                                        <h3 class="widgettitle">Last updated</h3>
+                                        <TMPL_VAR date>
+                                        <br />
+                                        <em>All times are UTC.</em>
+                                    </div>
 
-<h3><a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">"><TMPL_VAR channel_name></a></h3>
-<TMPL_IF channel_face>
-<img class="face" src="<TMPL_VAR channel_face ESCAPE="HTML">" width="<TMPL_VAR channel_facewidth ESCAPE="HTML">" height="<TMPL_VAR channel_faceheight ESCAPE="HTML">" alt="">
-</TMPL_IF>
-</TMPL_IF>
+                                </div>
+                            </div> <!-- END .right-sidebar-wrapper -->
 
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div class="entrygroup" id="<TMPL_VAR id>"<TMPL_IF channel_language> lang="<TMPL_VAR channel_language>"</TMPL_IF>>
-<TMPL_IF title>
-<h4<TMPL_IF title_language> lang="<TMPL_VAR title_language>"</TMPL_IF>><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h4>
-</TMPL_IF>
-<div class="entry">
-<div class="content"<TMPL_IF content_language> lang="<TMPL_VAR content_language>"</TMPL_IF>>
-<TMPL_VAR content>
-</div>
+        <div class="clear"></div>
+    </div>
+</div> <!-- END .main-outer-wrapper -->
 
-### Planet also makes available all of the information from the feed
-### that it can.  Use the 'planet-cache' tool on the cache file for
-### a particular feed to find out what additional keys it supports.
-### Comment extra fields are 'author' and 'category' which we
-### demonstrate below.
+            <div class="footer-outer-wrapper">
+                <div class="copyright-outer-wrapper"></div>
+            </div> <!-- END .footer-outer-wrapper -->
 
-<p class="date">
-<a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_IF author>by <TMPL_VAR author ESCAPE="HTML"> at </TMPL_IF><TMPL_VAR date><TMPL_IF category> under <TMPL_VAR category></TMPL_IF></a>
-</p>
-</div>
-</div>
-
-<TMPL_IF __LAST__>
-### End <div class="channelgroup">
-</div>
-### End <div class="daygroup">
-</div>
-</TMPL_IF>
-</TMPL_LOOP>
-
-
-<div class="sidebar">
-<img src="images/logo.png" width="136" height="136" alt="">
-
-<h2>Subscriptions</h2>
-<ul>
-<TMPL_LOOP Channels>
-<li>
-<a href="<TMPL_VAR url ESCAPE="HTML">" title="subscribe"><img src="images/feed-icon-10x10.png" alt="(feed)"></a> <a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a>
-</li>
-</TMPL_LOOP>
-</ul>
-
-<p>
-<strong>Last updated:</strong><br>
-<TMPL_VAR date><br>
-<em>All times are UTC.</em><br>
-</p>
-</div>
+        </div> <!-- END .body-wrapper -->
+    </div> <!-- END .body-outer-wrapper -->
 </body>
-
 </html>
