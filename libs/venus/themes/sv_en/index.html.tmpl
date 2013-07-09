@@ -1,52 +1,22 @@
 <!DOCTYPE html>
 <html lang="bg-BG" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" >
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- Mobile Specific ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
-
-    <!-- Title Tag ======================================================== -->
-    
-
-    <!-- Browser Specical Files =========================================== -->
     <!--[if lt IE 9]><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->  
     <!--[if lt IE 9]> <link rel='stylesheet' id=''  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/ie8.css' type='text/css' media='all' /><![endif]--> 
+<title><TMPL_VAR name></title>
 
-    <!-- Site Favicon ===================================================== -->
-        
-    <!-- WP HEAD ========================================================== -->
-    
-<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.13 - http://yoast.com/wordpress/seo/ -->
-<title>За Долината - Sofia Valley</title>
-<link rel="canonical" href="http://sofiavalley.com/about/" />
-<link rel="author" href="https://plus.google.com/111383297933302196021/"/>
-<meta property='og:locale' content='bg_BG'/>
-<meta property='og:type' content='article'/>
-<meta property='og:title' content='За Долината - Sofia Valley'/>
-<meta property='og:description' content='&#8220;Sofia Valley&#8221; е &#8220;Блог за ИТ живота в Софийската долина&#8220;. Идеята е много проста &#8211; да споделяме...'/>
-<meta property='og:url' content='http://sofiavalley.com/about/'/>
-<meta property='og:site_name' content='Sofia Valley'/>
-<meta property='article:author' content='http://www.facebook.com/mmiroslavov'/>
-<meta property='fb:admins' content='692551531'/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:site" content="@sofiavalley"/>
-<meta name="twitter:domain" content="Sofia Valley"/>
-<meta name="twitter:creator" content="@https://twitter.com/mmiroslavov"/>
-<meta name="twitter:image:src" content=""/>
-<!-- / Yoast WordPress SEO plugin. -->
-
-<link rel="alternate" type="application/rss+xml" title="Sofia Valley &raquo; Feed" href="http://feeds.feedburner.com/SofiaValley" />
-<link rel="alternate" type="application/rss+xml" title="Sofia Valley &raquo; Comments Feed" href="http://sofiavalley.com/comments/feed/" />
+<TMPL_IF feedtype>
+<link rel="alternate" href="http://feeds.feedburner.com/PlanetSofiaValley" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">" type="application/<TMPL_VAR feedtype>+xml">
+</TMPL_IF>
 
 <link rel='stylesheet' id='st_style-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/style.css?ver=2.2' type='text/css' media='all' />
 <link rel='stylesheet' id='font-awesome-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/assets/css/font-awesome.min.css?ver=3.5.2' type='text/css' media='all' />
 <link rel='stylesheet' id='responsive-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/assets/css/responsive.css?ver=3.5.2' type='text/css' media='all' />
 
-<link rel='shortlink' href='http://wp.me/P2NgGt-k' />
-<link href="https://plus.google.com/103080185376468291231/" rel="publisher" /><!-- All in one Favicon 4.3 -->
 <link rel="shortcut icon" href="http://sofiavalley.com/wp-content/uploads/2012/10/SV-16.ico" />
 <link rel="icon" href="http://sofiavalley.com/wp-content/uploads/2012/10/SV-16.png" type="image/png"/>
 
