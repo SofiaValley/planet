@@ -16,6 +16,18 @@
 <link rel='stylesheet' id='st_style-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/style.css?ver=2.2' type='text/css' media='all' />
 <link rel='stylesheet' id='font-awesome-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/assets/css/font-awesome.min.css?ver=3.5.2' type='text/css' media='all' />
 <link rel='stylesheet' id='responsive-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/assets/css/responsive.css?ver=3.5.2' type='text/css' media='all' />
+<!--
+<link rel='stylesheet' id='layerslider_css-css'  href='http://sofiavalley.com/wp-content/plugins/LayerSlider/css/layerslider.css?ver=4.5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack-widgets-css'  href='http://sofiavalley.com/wp-content/plugins/jetpack/modules/widgets/widgets.css?ver=20121003' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='http://sofiavalley.com/wp-content/plugins/tablepress/css/default.min.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-custom-css'  href='http://sofiavalley.com/wp-content/tablepress-custom.min.css?ver=42' type='text/css' media='all' />
+<link rel='stylesheet' id='st_style-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/style.css?ver=2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/assets/css/font-awesome.min.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ddsmoothmenu-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/assets/css/ddsmoothmenu.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/assets/css/flexslider.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/assets/css/responsive.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='custom_css-css'  href='http://sofiavalley.com/wp-content/themes/magazon-wp/magazon-wp/custom.css?ver=3.5.2' type='text/css' media='all' />
+-->
 
 <link rel="shortcut icon" href="http://sofiavalley.com/wp-content/uploads/2012/10/SV-16.ico" />
 <link rel="icon" href="http://sofiavalley.com/wp-content/uploads/2012/10/SV-16.png" type="image/png"/>
@@ -215,35 +227,46 @@ img.alignnone {
                 <div class="row">
                     <div class="page-wrapper twelve columns right-sidebar b0">
                         <div class="row">
-                            <div class="content-wrapper eight columns b0">
-                                <h1 class="page-title">За Долината</h1>
-                                <div class="post-20 page type-page status-publish hentry content clearfix">
-                                    <div class="post-entry">
+                            <div class="content-wrapper eight columns b0" style="width:100%">
 
-                                    </div>
-                                </div>
-                            </div>
+                                <div class="post-2199 page type-page status-publish hentry content clearfix">
+                                    <div class="post-bc">
+                                        <div class="row">
+                                            <div class="twelve columns">
 
-                            <div class="right-sidebar-wrapper four columns b0">
-                                <div class="right-sidebar sidebar">
-                                    <div class="widget-container widget_tag_cloud">
-                                        <h3 class="widgettitle">Subscriptions</h3>
-                                        <div class="tagcloud">
-                                            <TMPL_LOOP Channels>
-                                                <a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message tag-link-42" style='font-size: 15.5490196078pt;' title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a>
+                                            <TMPL_LOOP Items>
+
+                                                <div class="post type-post status-publish format-standard hentry row st-category-wrapper">
+                                                    <div class="columns">
+                                                        <TMPL_IF channel_face>
+                                                          <img class="face" src="<TMPL_VAR channel_face ESCAPE="HTML">" width="<TMPL_VAR channel_facewidth ESCAPE="HTML">" height="<TMPL_VAR channel_faceheight ESCAPE="HTML">" alt="" style="float:right;">
+                                                        </TMPL_IF>
+
+                                                        <h2 class="post-title">
+                                                            <a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a>
+                                                        </h2>
+                                                        <div class="post-meta" style="width:30%">
+                                                          <span class="date"><TMPL_VAR new_date></span> -
+                                                          <span class="author">
+                                                              <a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">"><TMPL_VAR channel_name></a>
+                                                          </span>
+                                                        </div>
+                                                        <div class="post-excerpt">
+                                                            <TMPL_VAR content>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </div>
+
                                             </TMPL_LOOP>
+
+                                            </div>
+                                            <div class="clear"></div>
                                         </div>
                                     </div>
-
-                                    <div class="widget-container widget_tag_cloud">
-                                        <h3 class="widgettitle">Last updated</h3>
-                                        <TMPL_VAR date>
-                                        <br />
-                                        <em>All times are UTC.</em>
-                                    </div>
-
                                 </div>
-                            </div> <!-- END .right-sidebar-wrapper -->
+
+                            </div> <!-- END .content-wrapper -->
 
                             <div class="clear"></div>
                         </div>
@@ -257,6 +280,37 @@ img.alignnone {
 </div> <!-- END .main-outer-wrapper -->
 
             <div class="footer-outer-wrapper">
+                <div class="footer-wrapper container">
+                    <div class="row">
+
+                        <div class="three columns">
+                            <div id="tag_cloud-3" class="widget-container widget_tag_cloud">
+                                <h3 class="widgettitle footer_widgettitle">Subscriptions</h3>
+                                <div class="tagcloud">
+                                    <TMPL_LOOP Channels>
+                                        <a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message tag-link-42" style='font-size: 15.5490196078pt;' title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a>
+                                    </TMPL_LOOP>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="three columns">
+                            <div id="tag_cloud-3" class="widget-container widget_tag_cloud">
+                                <h3 class="widgettitle footer_widgettitle">Last updated</h3>
+                                <div class="tagcloud">
+                                    <TMPL_VAR date>
+                                    <br />
+                                    <em>All times are UTC.</em>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>    
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+
                 <div class="copyright-outer-wrapper"></div>
             </div> <!-- END .footer-outer-wrapper -->
 
