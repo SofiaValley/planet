@@ -767,4 +767,8 @@ License URI: http://www.gnu.org/licenses/gpl.html
     /* for builder  widget item */
     .buider-widget .widget-container  ul, .content .buider-widget .widget-container  ul{ margin-left:0px; }
    
-
+.icon-facebook:before{content: url(icon-facebook.png); }
+.icon-twitter:before{content: url(icon-twitter.png); }
+.icon-rss:before{content: url(icon-rss.png); }
+.icon-facebook:before{content: url(icon-facebook.png); }
+.icon-google-plus:before{content: url(icon-google.jpg); }
