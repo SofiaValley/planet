@@ -649,7 +649,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 		.flickr_badge_image img{width: 53px;height: 53px;}
 
 		/*Footer Tags Widget -------------------*/
-		.tagcloud a,.page-tags a{font-size:12px !important;padding:2px 8px 3px 19px;background-image: url('assets/images/tags_bg.png');background-color: #505050;background-position: 7px center;background-repeat: no-repeat;
+		.tagcloud a,.page-tags a{font-size:12px !important;padding:2px 8px 3px 19px;background-image: url('tags_bg.png');background-color: #505050;background-position: 7px center;background-repeat: no-repeat;
 					margin:0 3px 6px 0;border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;display: inline-block;color:#999999;}
 		.sidebar .tagcloud a,.page-tags a{background-color: #e5e5e5;text-shadow:0 1px 0 #FFFFFF;}
 		.tagcloud a:hover,.page-tags a:hover{background-color: #16A1E7;color:#fff !important;text-shadow: none;}
@@ -767,8 +767,9 @@ License URI: http://www.gnu.org/licenses/gpl.html
     /* for builder  widget item */
     .buider-widget .widget-container  ul, .content .buider-widget .widget-container  ul{ margin-left:0px; }
    
-.icon-facebook:before{content: url(icon-facebook.png); }
-.icon-twitter:before{content: url(icon-twitter.png); }
-.icon-rss:before{content: url(icon-rss.png); }
-.icon-facebook:before{content: url(icon-facebook.png); }
-.icon-google-plus:before{content: url(icon-google.jpg); }
+.icon-facebook:before{content: url('
+icon-facebook.png'); }
+.icon-twitter:before{content: url('icon-twitter.png'); }
+.icon-rss:before{content: url('icon-rss.png'); }
+.icon-facebook:before{content: url('icon-facebook.png'); }
+.icon-google-plus:before{content: url('icon-google.jpg'); }
