@@ -2,7 +2,7 @@ SofiaValley RSS Planet
 ----------------------
 
 This is the RSS Planet at <http://sofiavalley.com>. The purpose of this Planet
-is to show the world that Sofia (and Bulgaria) is a place with many tallented
+is to promote Sofia (and Bulgaria) as a place with many tallented
 developers and hackers and make it easier for foreigners to follow tech related
 activities in the region.
 
