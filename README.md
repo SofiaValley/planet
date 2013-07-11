@@ -24,7 +24,8 @@ Everyone is welcome to join if you agree to the following rules
 link back to <http://planet.sofiavalley.com> - failure to comply will be made
 public;
 
-To add your blog just fork this repo and submit a pull request. Configuration
+To add your blog just fork this repo and submit a
+[pull request](https://github.com/SofiaValley/planet/pull/1). Configuration
 files are in `data/` and are self explanatory. 
 
 
