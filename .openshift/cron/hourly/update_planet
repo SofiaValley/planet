@@ -8,6 +8,10 @@ if [ -n "$OPENSHIFT_HOMEDIR" ]; then
     BG_CONF=$OPENSHIFT_REPO_DIR/data/planet.bulgarian.ini
 
     $OPENSHIFT_REPO_DIR/libs/venus/planet.py $EN_CONF
+    # first upload CSS and manually set Mime-Type b/c Magic guesses it wrong
+    s3cmd sync -c $OPENSHIFT_DATA_DIR/s3.cfg -v -m text/css -P /tmp/svplanet/english/html/*.css s3://planet.sofiavalley.com/
+
+    # then update everything else
     s3cmd sync -c $OPENSHIFT_DATA_DIR/s3.cfg -v -P /tmp/svplanet/english/html/* s3://planet.sofiavalley.com/
 
 #    $OPENSHIFT_REPO_DIR/libs/venus/planet.py $BG_CONF
