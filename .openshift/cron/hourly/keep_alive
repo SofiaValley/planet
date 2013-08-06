@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# keep alive the cron instance and prevent it
+# from becoming idle
+
+if [ -n "$OPENSHIFT_APP_DNS" ]; then
+    curl http://$OPENSHIFT_APP_DNS >/dev/null
+fi
