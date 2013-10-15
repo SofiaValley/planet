@@ -1,18 +1,21 @@
 #!/bin/bash
 
-if [ -n "$OPENSHIFT_HOMEDIR" ]; then
-    source $OPENSHIFT_HOMEDIR/python/virtenv/bin/activate
-    export PYTHON_EGG_CACHE=$OPENSHIFT_DATA_DIR/.python-eggs
+BASE_DIR=$(dirname $(readlink -f $0))
+EN_CONF=$BASE_DIR/data/planet.english.ini
+BG_CONF=$BASE_DIR/data/planet.bulgarian.ini
 
-    EN_CONF=$OPENSHIFT_REPO_DIR/data/planet.english.ini
-    BG_CONF=$OPENSHIFT_REPO_DIR/data/planet.bulgarian.ini
+pushd $BASE_DIR
 
-    $OPENSHIFT_REPO_DIR/libs/venus/planet.py $EN_CONF
-    # first upload CSS and manually set Mime-Type b/c Magic guesses it wrong
-    s3cmd sync -c $OPENSHIFT_DATA_DIR/s3.cfg -v -m text/css -P /tmp/svplanet/english/html/*.css s3://planet.sofiavalley.com/
+source ~/virtualenvs/planet.sofiavalley.com/bin/activate
 
-    # then update everything else
-    s3cmd sync -c $OPENSHIFT_DATA_DIR/s3.cfg -v -P /tmp/svplanet/english/html/* s3://planet.sofiavalley.com/
+$BASE_DIR/libs/venus/planet.py $EN_CONF
+# first upload CSS and manually set Mime-Type b/c Magic guesses it wrong
+s3cmd sync -c $BASE_DIR/data/s3.cfg -v -m text/css -P /tmp/svplanet/english/html/*.css s3://planet.sofiavalley.com/
 
-#    $OPENSHIFT_REPO_DIR/libs/venus/planet.py $BG_CONF
-fi
+# then update everything else
+s3cmd sync -c $BASE_DIR/data/s3.cfg -v -P /tmp/svplanet/english/html/* s3://planet.sofiavalley.com/
+
+#$BASE_DIR/libs/venus/planet.py $BG_CONF
+# todo: upload
+
+popd $BASE_DIR
