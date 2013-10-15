@@ -52,9 +52,11 @@ How To Install and Run
     $ . ~/.bashrc
     $ mkvirtualenv planet.sofiavalley.com
     $ pip install -r requirements.txt
-    $ crontab -e      and put the text
+    $ crontab -e       and put the text
 
     01      *       *       *       *       ~/planet/update_planet
+
+    $ vi data/s3.cfg   and add your settings there!
 
 How To Contribute
 =================
