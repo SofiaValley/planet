@@ -33,14 +33,12 @@ Software Stack
 ==============
 
 The software which runs this Planet is called
-[Venus](https://github.com/rubys/venus). This repository structure follows the
-directory layout used at Red Hat's OpenShift PaaS. Most of the files are ignored.
-We only make use of the cron cartridge at OpenShift.
+[Venus](https://github.com/rubys/venus).
 
 Venus is in `libs/venus/` with themes under `libs/venus/themes/`. Config files
 are in `data/`. 
 
-The cron task which updates this Planet is in `.openshift/cron/hourly/`.
+The cron task which updates this Planet is `update_planet`.
 All static files are then synced to Amazon S3 and served from there.
 
 How To Contribute
