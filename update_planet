@@ -6,7 +6,7 @@ BG_CONF=$BASE_DIR/data/planet.bulgarian.ini
 
 pushd $BASE_DIR
 
-source ~/virtualenvs/planet.sofiavalley.com/bin/activate
+source ~/.virtualenvs/planet.sofiavalley.com/bin/activate
 
 $BASE_DIR/libs/venus/planet.py $EN_CONF
 # first upload CSS and manually set Mime-Type b/c Magic guesses it wrong
