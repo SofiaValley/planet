@@ -52,8 +52,9 @@ How To Install and Run
     $ . ~/.bashrc
     $ mkvirtualenv planet.sofiavalley.com
     $ pip install -r requirements.txt
-    # echo "01      *       *       *       *       ~/planet/update_planet" >> /var/spool/cron/$(whoami)
-    # chmod 600 /var/spool/cron/$(whoami)
+    $ crontab -e      and put the text
+
+    01      *       *       *       *       ~/planet/update_planet
 
 How To Contribute
 =================
