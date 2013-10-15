@@ -44,8 +44,12 @@ All static files are then synced to Amazon S3 and served from there.
 How To Install and Run
 ======================
 
-    $ git clone git@github.com:SofiaValley/planet.git
+    $ git clone git://github.com/SofiaValley/planet.git
     $ cd planet/
+    $ mkdir ~/.virtualenvs
+    $ echo "export WORKON_HOME=$HOME/.virtualenvs" >> ~/.bashrc
+    $ echo "source /usr/bin/virtualenvwrapper.sh" >> ~/.bashrc
+    $ . ~/.bashrc
     $ mkvirtualenv planet.sofiavalley.com
     $ pip install -r requirements.txt
     # echo "01      *       *       *       *       ~/planet/update_planet" >> /var/spool/cron/$(whoami)
