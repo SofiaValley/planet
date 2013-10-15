@@ -6,15 +6,24 @@ BG_CONF=$BASE_DIR/data/planet.bulgarian.ini
 
 pushd $BASE_DIR
 
+# update local copy
+git pull && git fetch --tags
+
+# activate virtualenv. NB: name is hard-coded
 source ~/.virtualenvs/planet.sofiavalley.com/bin/activate
 
+
+# update planet and push contents
 $BASE_DIR/libs/venus/planet.py $EN_CONF
+
 # first upload CSS and manually set Mime-Type b/c Magic guesses it wrong
 s3cmd sync -c $BASE_DIR/data/s3.cfg -v -m text/css -P /tmp/svplanet/english/html/*.css s3://planet.sofiavalley.com/
 
 # then update everything else
 s3cmd sync -c $BASE_DIR/data/s3.cfg -v -P /tmp/svplanet/english/html/* s3://planet.sofiavalley.com/
 
+
+# update bulgarian version of planet
 #$BASE_DIR/libs/venus/planet.py $BG_CONF
 # todo: upload
 
