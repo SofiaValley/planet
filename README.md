@@ -41,6 +41,14 @@ are in `data/`.
 The cron task which updates this Planet is `update_planet`.
 All static files are then synced to Amazon S3 and served from there.
 
+How To Install and Run
+======================
+
+    $ mkvirtualenv planet.sofiavalley.com
+    $ pip install -r requirements.txt
+    # echo "01      *       *       *       *       ~/planet/update_planet" >> /var/spool/cron/$(whoami)
+    # chmod 600 /var/spool/cron/$(whoami)
+
 How To Contribute
 =================
 
