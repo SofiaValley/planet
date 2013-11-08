@@ -7,7 +7,7 @@ BG_CONF=$BASE_DIR/data/planet.bulgarian.ini
 pushd $BASE_DIR
 
 # update local copy
-git pull && git fetch --tags
+git pull origin master && git fetch --tags
 
 # activate virtualenv. NB: name is hard-coded
 source ~/.virtualenvs/planet.sofiavalley.com/bin/activate
