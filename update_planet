@@ -13,13 +13,13 @@ for ef in `curl http://169.254.169.254/latest/meta-data/block-device-mapping/ 2>
         echo "/tmp not mounted"
 
         echo "Unmounting /dev/$disk"
-        umount -f /dev/$disk
+        sudo umount -f /dev/$disk
 
         echo "mkfs /dev/$disk"
-        mkfs.ext4 -q /dev/$disk
+        sudo mkfs.ext4 -q /dev/$disk
 
         echo "Mounting /dev/$disk on /tmp"
-        mount -t ext4 /dev/$disk /tmp && chmod 1777 /tmp
+        sudo mount -t ext4 /dev/$disk /tmp && chmod 1777 /tmp
     else
         echo "/tmp is already mounted"
     fi
