@@ -4,6 +4,28 @@ BASE_DIR=$(dirname $(readlink -f $0))
 EN_CONF=$BASE_DIR/data/planet.english.ini
 BG_CONF=$BASE_DIR/data/planet.bulgarian.ini
 
+echo "Checking for ephemeral storage configuration"
+for ef in `curl http://169.254.169.254/latest/meta-data/block-device-mapping/ 2>/dev/null | grep ephemeral`; do
+    disk=`curl http://169.254.169.254/latest/meta-data/block-device-mapping/$ef 2>/dev/null`
+
+    # check if /tmp is already mounted (assume on ephemeral storage)
+    if [ `mount | grep -c "/tmp "` == "0" ]; then
+        echo "/tmp not mounted"
+
+        echo "Unmounting /dev/$disk"
+        umount -f /dev/$disk
+
+        echo "mkfs /dev/$disk"
+        mkfs.ext4 -q /dev/$disk
+
+        echo "Mounting /dev/$disk on /tmp"
+        mount -t ext4 /dev/$disk /tmp && chmod 1777 /tmp
+    else
+        echo "/tmp is already mounted"
+    fi
+done
+
+
 pushd $BASE_DIR
 
 # update local copy
