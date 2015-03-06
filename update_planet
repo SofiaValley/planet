@@ -5,7 +5,7 @@ EN_CONF=$BASE_DIR/data/planet.english.ini
 BG_CONF=$BASE_DIR/data/planet.bulgarian.ini
 
 echo "Checking for ephemeral storage configuration"
-for ef in `curl http://169.254.169.254/latest/meta-data/block-device-mapping/ 2>/dev/null | grep ephemeral`; do
+for ef in `curl -m 5 http://169.254.169.254/latest/meta-data/block-device-mapping/ 2>/dev/null | grep ephemeral`; do
     disk=`curl http://169.254.169.254/latest/meta-data/block-device-mapping/$ef 2>/dev/null`
 
     # check if /tmp is already mounted (assume on ephemeral storage)
